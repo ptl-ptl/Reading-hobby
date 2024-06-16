@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reading - My Hobby</title>
+    <style>
+      body {
+        background: linear-gradient(
+          180deg,
+          rgb(255, 241, 165) 1.9%,
+          rgb(200, 125, 76) 49.7%,
+          rgb(83, 54, 54) 100.5%
+        );
+      }
+
+      .change-theme {
+        background-color: black;
+        border: 2px solid #fdfcfb;
+        color: #fdfcfb;
+        border-radius: 30px;
+        font-size: 14px;
+        padding: 10px 20px;
+        margin: 10px auto;
+        cursor: pointer;
+        display: block;
+        transition: 0.3s;
+      }
+
+      .change-theme:hover {
+        background-color: #fdfcfb;
+        border-color: #604228;
+        color: #604228;
+      }
+
+      .container {
+        background: #d3a284;
+        width: 800px;
+        padding: 20px;
+        margin: 30px auto;
+        border-radius: 40px;
+        text-align: center;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      li {
+        list-style-position: inside;
+        list-style-type: disc;
+        font-size: 18px;
+      }
+
+      .container button {
+        background-color: #fdfcfb;
+        border: 2px solid #604228;
+        border-radius: 30px;
+        font-size: 20px;
+        padding: 10px 20px;
+        margin: 40px auto;
+        cursor: pointer;
+        display: block;
+        transition: 0.4s;
+      }
+
+      .container button:hover {
+        background-color: #604228;
+        border-color: #fdfcfb;
+        color: #fdfcfb;
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24);
+      }
+
+      footer {
+        text-align: center;
+        margin: 10px;
+      }
+
+      .book-intro-pic {
+        border-radius: 10px;
+        transition: all 200ms ease-in-out;
+      }
+
+      .book-intro-pic:hover {
+        filter: contrast(80%);
+        transform: scale(1.2);
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+      .grid-images {
+        margin: 20px 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+      }
+
+      .grid-images img {
+        width: 300px;
+        height: 160px;
+        border-radius: 10px;
+        object-fit: cover;
+        transition: all 200ms ease-in-out;
+      }
+
+      .grid-images img:hover {
+        filter: contrast(80%);
+        transform: scale(1.2);
+      }
+      .darkTheme {
+        background: radial-gradient(
+          circle at 10% 20%,
+          rgb(90, 92, 106) 0%,
+          rgb(32, 45, 58) 81.3%
+        );
+      }
+
+      .darkTheme .container {
+        background-color: darkgray;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="change-theme">Change Theme</button>
+    <div class="container">
+      <h1>Reading</h1>
+      <h2>- My Favorite Hobby -</h2>
+      <a href="https://en.wikipedia.org/wiki/Reading" target="_blank">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/107/654/original/read.jpg?1702897628"
+          alt="book"
+          class="book-intro-pic"
+        />
+      </a>
+      <div class="grid-images">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/107/655/original/book1.png?1702897637"
+          alt="book1"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/107/656/original/book2.jpeg?1702897646"
+          alt="book2"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/107/657/original/book6.jpg?1702897663"
+          alt="book3"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/107/658/original/book7.jpg?1702897675"
+          alt="book4"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/107/659/original/book8.jpg?1702897827"
+          alt="book5"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/107/660/original/book3.jpg?1702897836"
+          alt="book6"
+        />
+      </div>
+      <p>
+        Reading is a very good habit that one needs to develop in life. Good
+        books can inform you, enlighten you and lead you in the right direction.
+        There is no better companion than a good book. Reading is important
+        because it is good for your overall well-being. Once you start reading,
+        you experience a whole new world. When you start loving the habit of
+        reading you eventually get addicted to it. Reading develops language
+        skills and vocabulary. Reading books is also a way to relax and reduce
+        stress. It is important to read a good book at least for a few minutes
+        each day to stretch the brain muscles for healthy functioning.
+      </p>
+      <h3>Top benefits of reading</h3>
+      <ol>
+        <li>Reading is pleasurable</li>
+        <li>Reading can reduce stress</li>
+        <li>Improves your concentration and memory</li>
+        <li>Vocabulary expansion and strengthens your writing abilities</li>
+        <li>Enhances your knowledge</li>
+        <li>Increases your imagination and creativity</li>
+      </ol>
+      <button class="reading-button">More about Reading</button>
+    </div>
+    <footer>Coded by Priyal Patel</footer>
+  </body>
+  <script>
+    function changeTheme() {
+      let body = document.querySelector("body");
+
+      if (body.classList.contains("darkTheme")) {
+        body.classList.remove("darkTheme");
+      } else {
+        body.classList.add("darkTheme");
+      }
+    }
+    let themeButton = document.querySelector(".change-theme");
+    themeButton.addEventListener("click", changeTheme);
+
+    function moreReading() {
+      let name = prompt("What's your name?");
+      let read = prompt("Do you read often? Yes/No");
+      let email = prompt("What is your email?");
+
+      read = read.toLowerCase().trim();
+
+      if (read === "yes") {
+        alert(
+          "Hey " +
+            name +
+            "! Happy reading! Enjoy the book you are reading. We'll send you an email with more details about 'Reading Habits'. "
+        );
+      } else {
+        alert(
+          "Hey " +
+            name +
+            "! Do start reading and you'll never regret. We'll send you an email with more details about 'Reading Habits'. "
+        );
+      }
+    }
+    let readingButton = document.querySelector(".reading-button");
+    readingButton.addEventListener("click", moreReading);
+  </script>
+</html>
